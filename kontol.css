@@ -8698,7 +8698,7 @@ fieldset:disabled .btn {
   border-radius: var(--bs-border-radius-xxl) !important;
 }
 .rounded-circle {
-  border-radius: 50% !important;
+  border-radius: 20% !important;
 }
 .rounded-pill {
   border-radius: var(--bs-border-radius-pill) !important;
