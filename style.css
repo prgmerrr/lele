@@ -1,23 +1,23 @@
 :root {
-  --pink: #f14e95;
+  --pink: rgb(8, 8, 8);
   --bg: #0a0a0a;
   --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
 
 body {
   font-size: 1.2rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   min-height: 4000px;
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(img/bg-prewed.jpg);
+  background-image: url(img/alex-lvrs-Md6_qA-BMis-unsplash.jpg);
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -32,11 +32,12 @@ body {
 .hero h1,
 .hero h4,
 .hero p {
+  color: var(--pink);
   text-shadow: var(--shadow);
 }
 
 .hero h1 {
-  font-family: 'Sacramento', cursive;
+  font-family: "Montserrat", cursive;
   font-size: 6rem;
 }
 
@@ -70,8 +71,8 @@ body {
 
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
-  font-family: 'Sacramento', cursive;
-  font-size: 3.2rem;
+  font-family: "Montserrat", cursive;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -95,7 +96,7 @@ body {
 .rsvp h2,
 .gifts h2 {
   color: var(--pink);
-  font-family: 'Sacramento';
+  font-family: "Montserrat";
   font-size: 5rem;
   font-weight: bold;
 }
@@ -116,7 +117,7 @@ body {
 }
 
 .home .couple h3 {
-  font-family: 'Sacramento';
+  font-family: "Montserrat";
   font-size: 2.4rem;
   color: var(--pink);
 }
@@ -124,24 +125,6 @@ body {
 .home .couple img {
   width: 100%;
 }
-
-.home .heart {
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  display: flex;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(65px);
-}
-
-.home .heart i {
-  margin: auto;
-  color: var(--pink);
-}
-
 .info {
   background-color: var(--bg);
   color: white;
@@ -215,7 +198,7 @@ body {
 }
 
 .timeline::before {
-  content: '';
+  content: "";
   top: 0;
   bottom: 0;
   position: absolute;
@@ -231,7 +214,7 @@ body {
 
 .timeline li::before,
 .timeline li::after {
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -263,7 +246,7 @@ body {
 }
 
 .timeline li .timeline-panel::before {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   border-top: 15px solid transparent;
@@ -275,7 +258,7 @@ body {
 }
 
 .timeline li .timeline-panel::after {
-  content: '';
+  content: "";
   position: absolute;
   display: inline-block;
   border-top: 14px solid transparent;
@@ -377,6 +360,18 @@ footer li {
   line-height: 0;
 }
 
+small {
+  display: inline-block;
+}
+
+.link-webpas a {
+  color: rgb(219, 188, 13);
+}
+
+.row {
+  margin: 5px;
+}
+
 @keyframes rotating {
   from {
     transform: rotate(0);
@@ -451,7 +446,7 @@ footer li {
 
   .mynavbar .nav-link {
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
   }
 
   .sticky-top {
