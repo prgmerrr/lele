@@ -127,9 +127,10 @@ body {
 }
 .info {
   background-color: var(--bg);
-  color: white;
+  color: rgb(0, 0, 0);
   padding-top: 10rem;
   padding-bottom: 8rem;
+  margin-bottom: 0;
 }
 
 .info .alamat {
@@ -167,7 +168,6 @@ body {
 .gallery,
 .rsvp,
 .gifts {
-  padding-top: 10rem;
   padding-bottom: 8rem;
 }
 
