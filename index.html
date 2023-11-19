@@ -84,13 +84,7 @@
                 main-main, harus berusaha sekeras mungkin buat meraih masa depan
                 .Happy sweet seventeen !
               </p>
-              <div class="col-4">
-                <img
-                  src="img/WhatsApp Image 2023-11-13 at 17.51.37_1051d0fd.jpg"
-                  alt="Reza Nurpaizi"
-                  class="img-responsive rounded-circle"
-                />
-              </div>
+              <div class="col-4"></div>
             </div>
           </div>
         </div>
@@ -204,10 +198,65 @@
             </div>
           </div>
           <div class="col-12" style="margin-top: 35px">
-            <button class="btn">Kirim</button>
+            <button class="btn btn-primary">Kirim</button>
           </div>
         </form>
+
+        <!-- ENDD -->
       </div>
+      <script>
+        window.addEventListener("load", function () {
+          const form = document.getElementById("my-form");
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Mengambil nilai dari input formulir
+            const namaInput = document.getElementById("nama");
+            const jumlahInput = document.getElementById("jumlah");
+            const statusInput = document.getElementById("status");
+
+            const nama = namaInput.value;
+            const jumlah = jumlahInput.value;
+            const status = statusInput.value;
+
+            // Memastikan nama tidak kosong
+            if (!nama) {
+              alert("Harap isi nama Anda");
+              return;
+            }
+
+            // Memastikan jumlah tidak kosong dan valid
+            if (!jumlah || isNaN(jumlah) || jumlah < 1 || jumlah > 5) {
+              alert("Harap isi jumlah (antara 1 dan 5)");
+              return;
+            }
+
+            // Memastikan status dipilih
+            if (status === "Pilih salah satu") {
+              alert("Harap pilih status kehadiran Anda");
+              return;
+            }
+
+            // Mengganti dengan nomor WhatsApp tujuan
+            const recipientNumber = "6285888933466";
+
+            // Mengganti dengan pesan yang ingin dikirim
+            const message = `Konfirmasi kehadiran:\nNama: ${nama}\nJumlah: ${jumlah}\nStatus: ${status}`;
+
+            // Membuat URL dengan nomor dan pesan
+            const whatsappURL = `https://wa.me/${recipientNumber}?text=${encodeURIComponent(
+              message
+            )}`;
+
+            // Membuka aplikasi WhatsApp
+            window.open(whatsappURL);
+
+            // Optional: Tampilkan pemberitahuan bahwa konfirmasi kehadiran berhasil terkirim
+            alert("Konfirmasi kehadiran berhasil terkirim!");
+          });
+        });
+      </script>
     </section>
     <section id="gifts" class="gifts">
       <div class="container">
